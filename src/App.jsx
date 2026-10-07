@@ -1,10 +1,12 @@
 import Content from './components/Content';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Read from './components/Read';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function App() {
@@ -20,6 +22,7 @@ function App() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/header">Header</Nav.Link>
             <Nav.Link href="/footer">Footer</Nav.Link>
+            <Nav.Link href="/read">Read</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -28,6 +31,7 @@ function App() {
         <Route path='/' element={<Content></Content>}></Route>
         <Route path='/header' element={<Header></Header>}></Route>
         <Route path='/footer' element={<Footer></Footer>}></Route>
+        <Route path='/read' element={<Read></Read>}></Route>
       </Routes>
       {/* <Header></Header>
       <Content></Content>
@@ -38,4 +42,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
